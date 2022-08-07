@@ -20,7 +20,15 @@ const Home = (props) => {
       {
         page ? <Result value={value} data={props.data} name={props.name} /> :
           (
-        {props.data?(
+        {props.isLoading&&(
+<div class="d-flex justify-content-center spinner-container">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>)
+}
+
+
 <form onSubmit={submitDetail}>
               <ol type='1'>
                 {
@@ -47,16 +55,12 @@ const Home = (props) => {
               </ol>
               <input type="submit" value="Submit" className='btn btn-dark ms-2' onClick={detailAdd} />
             </form>
-          ):
-(
-<div class="d-flex justify-content-center spinner-container">
-  <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
-</div>)
-}
+          )
 
-)
+
+
+
+
 
 }
             
