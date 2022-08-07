@@ -42,7 +42,7 @@ const Home = (props) => {
                         }
                       </>
                     )
-})
+                  })
                 }
               </ol>
               <input type="submit" value="Submit" className='btn btn-dark ms-2' onClick={detailAdd} />
@@ -54,6 +54,9 @@ const Home = (props) => {
     <span class="sr-only">Loading...</span>
   </div>
 </div>)
+}
+
+)
 
 }
             
