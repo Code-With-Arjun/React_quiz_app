@@ -18,17 +18,14 @@ const Home = (props) => {
   return (
     <>
       {
-        page ? <Result value={value} data={props.data} name={props.name} /> :
-          (
-        {props.isLoading&&(
-<div class="d-flex justify-content-center spinner-container">
+        props.isLoading&&(<div class="d-flex justify-content-center align-items-center spinner-container h-100">
   <div class="spinner-border" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </div>)
-}
-
-
+      }
+      {
+        page ? <Result value={value} data={props.data} name={props.name}/>:(
 <form onSubmit={submitDetail}>
               <ol type='1'>
                 {
@@ -56,16 +53,7 @@ const Home = (props) => {
               <input type="submit" value="Submit" className='btn btn-dark ms-2' onClick={detailAdd} />
             </form>
           )
-
-
-
-
-
-
 }
-            
-                  
-
     </>
 
   )
