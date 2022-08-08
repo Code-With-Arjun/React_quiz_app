@@ -20,7 +20,7 @@ const Home = (props) => {
       {
         props.isLoading&&(<div class="d-flex justify-content-center align-items-center spinner-container h-100">
   <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
+    <span class="sr-only"></span>
   </div>
 </div>)
       }
